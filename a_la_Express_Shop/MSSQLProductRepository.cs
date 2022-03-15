@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace a_la_Express_Shop
 {
-    public class MSSQLProductRepository : IRepository<Product>
+    public class MSSQLProductRepository : IRepository
     {
-        private Context db;
+        private readonly Context db;
         private bool disposed = false;
 
-        public MSSQLProductRepository()
+        public MSSQLProductRepository(Context cn)
         {
-            db = new Context();
+            db = cn;
         }
         public IEnumerable<Product> GetProductList()
         {

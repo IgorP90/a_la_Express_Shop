@@ -11,12 +11,19 @@ namespace a_la_Express_Shop.Controllers
     [Route("api/[controller]")]
     public class HomeController : Controller
     {
-        IRepository<Product> db = new MSSQLProductRepository();
+        private IRepository db;
+
+        public HomeController(MSSQLProductRepository ms)
+        {
+            db = ms;
+        }
 
         [HttpPost]
-        public void Create()
-        { }
-        [HttpGet("home/{id}")]
+        public void Create([FromBody]Product product)
+        {
+            db.Create(product);
+        }
+        [HttpGet]
         public Product Read(decimal id)
         {
             return db.Read(id);
