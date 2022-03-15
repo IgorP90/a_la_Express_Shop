@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = .NETCoreApp,Version=v5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = a_la_Express_ShopTests
+build_property.ProjectDir = E:\MyVisualStudio\a_la_Express_Shop\a_la_Express_ShopTests\
