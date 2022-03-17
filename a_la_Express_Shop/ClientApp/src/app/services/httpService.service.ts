@@ -1,16 +1,19 @@
 import {Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Product } from '../interfaces/product.interface';
 
 @Injectable()
 export class HttpService{
-    static http: any;
 
-    constructor(private http:HttpClient){
-        this.http = http
-    }
 
-    static get(url:string):Observable<any>{
+    constructor(private http:HttpClient){}
+
+    public get(url:string):Observable<any>{
         return this.http.get(url)
     }
+
+    /*post(url:string):Observable<any>{
+        return this.http.post(url)
+    }*/
 }   

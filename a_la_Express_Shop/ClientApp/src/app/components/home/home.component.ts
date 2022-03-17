@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {}
 
-    get(){
+    /*get(){
         HttpService.get('https://localhost:44307/home/1').subscribe((data:any) => this.product(data.price))
-    }
+    }*/
  
 }

@@ -38,7 +38,7 @@ namespace a_la_Express_Shop
             services.AddIdentityServer()
                 .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
 
-            services.AddScoped<IRepository, MSSQLProductRepository>();
+            //services.AddScoped<IRepository, MSSQLProductRepository>();
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();

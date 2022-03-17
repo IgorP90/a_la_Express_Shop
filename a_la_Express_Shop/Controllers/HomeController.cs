@@ -15,18 +15,25 @@ namespace a_la_Express_Shop.Controllers
 
         public HomeController(MSSQLProductRepository ms)
         {
-            db = ms;
+            db = new MSSQLProductRepository(new Context());
         }
 
         [HttpPost]
-        public void Create([FromBody]Product product)
+        public void Create([FromBody] Product product)
         {
             db.Create(product);
         }
-        [HttpGet]
+        [HttpGet("get/{id}")]
         public Product Read(decimal id)
         {
-            return db.Read(id);
+            try
+            {
+                return db.Read(id);
+            }
+            catch (Exception ex)
+            {
+                return new Product { Description = "Error = " + ex };
+            }
         }
         [HttpPut]
         public void Update(Product product)

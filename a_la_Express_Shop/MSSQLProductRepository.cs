@@ -24,10 +24,18 @@ namespace a_la_Express_Shop
         public void Create(Product product)
         {
             db.Products.Add(product);
+            Save();
         }        
         public Product Read(decimal id)
         {
-            return db.Products.Find(id);
+            try
+            {
+                return db.Products.Find(id);
+            }
+            catch (Exception ex)
+            {
+                return new Product { Description = "Error = " + ex };
+            }
         }
         public void Update(Product product)
         {

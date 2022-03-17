@@ -159,4 +159,3 @@ E:\MyVisualStudio\a_la_Express_Shop\a_la_Express_ShopTests\obj\Debug\.netcoreapp
 E:\MyVisualStudio\a_la_Express_Shop\a_la_Express_ShopTests\obj\Debug\.netcoreapp,version=v5.0\ref\a_la_Express_ShopTests.dll
 E:\MyVisualStudio\a_la_Express_Shop\a_la_Express_ShopTests\obj\Debug\.netcoreapp,version=v5.0\a_la_Express_ShopTests.pdb
 E:\MyVisualStudio\a_la_Express_Shop\a_la_Express_ShopTests\obj\Debug\.netcoreapp,version=v5.0\a_la_Express_ShopTests.genruntimeconfig.cache
-E:\MyVisualStudio\a_la_Express_Shop\a_la_Express_ShopTests\bin\Debug\.netcoreapp,version=v5.0\a_la_Express_Shop.StaticWebAssets.xml
