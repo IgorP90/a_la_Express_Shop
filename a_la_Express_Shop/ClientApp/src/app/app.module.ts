@@ -36,6 +36,7 @@ import { GetComponent } from './components/get/get.component';
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
       { path: 'create', component: CreateComponent },
       { path: 'get', component: GetComponent },
+      { path: 'post', component: CreateComponent },
     ])
   ],
   providers: [

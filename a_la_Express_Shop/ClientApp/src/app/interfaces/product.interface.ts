@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 export interface Product {
-    id:any
-    name:any
-    description:any
-    price:any
 
+    product_id:number
+    name:string
+    description:string
+    price:number
 }

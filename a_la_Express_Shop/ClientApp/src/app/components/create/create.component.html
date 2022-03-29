@@ -8,6 +8,13 @@
 </head>
 <body>
     <p>create works!</p>
+    <p>Id</p>
+    <input type="text" name="id" [(ngModel)]="product.product_id">
+    <p>Name</p>
+    <input type="text" name="name" [(ngModel)]="product.name">
+    <button (click)="create(product)">Send</button>
+
+    <p>{{product.name}}</p>
 </body>
 </html>
 

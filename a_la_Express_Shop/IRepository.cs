@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a_la_Express_Shop
 {
-    interface IRepository : IDisposable
+    public interface IRepository : IDisposable
     {
         IEnumerable<Product> GetProductList();
 

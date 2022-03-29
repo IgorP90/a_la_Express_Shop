@@ -32,8 +32,8 @@ namespace a_la_Express_Shop.Controllers.Tests
         [TestMethod()]
         public void CreateTest()
         {
-            HomeController hc = new(new MSSQLProductRepository(new Context()));
-            hc.Update(new Models.Product { Product_Id = 2, Description = "sdfsdfs", Name = "product_2", Price = 45 });
+            //HomeController hc = new(new MSSQLProductRepository(new Context()));
+            //hc.Update(new Models.Product { Product_Id = 2, Description = "sdfsdfs", Name = "product_2", Price = 45 });
             Assert.Fail();
         }
     }

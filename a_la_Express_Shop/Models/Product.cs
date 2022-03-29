@@ -9,7 +9,7 @@ namespace a_la_Express_Shop.Models
     public class Product
     {
         [Key]
-        public ulong Product_Id { get; set; }
+        public decimal Product_Id { get; set; }
         public string Name { get; set; } 
         public string Description { get; set; }
         public decimal Price { get; set; }

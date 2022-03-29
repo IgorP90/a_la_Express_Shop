@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/product.interface';
 import { HttpService } from 'src/app/services/httpService.service';
 
 @Component({
@@ -9,16 +10,18 @@ import { HttpService } from 'src/app/services/httpService.service';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpService:HttpClient) { }
 
   ngOnInit() {
   }
-
+  
+  product:Product
   result:any
 
-  /*search(){
-  this.HttpService.post('https://localhost:44307/create/1').subscribe((value)=> this.result = value)
-  };*/
+  create(){
+  this.httpService.post('https://localhost:44307/api/Home/post/product ', this.product)
+  .subscribe((value:Product)=> this.result = value)
+  };
 }
   
 

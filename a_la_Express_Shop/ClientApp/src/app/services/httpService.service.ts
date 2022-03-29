@@ -13,7 +13,7 @@ export class HttpService{
         return this.http.get(url)
     }
 
-    /*post(url:string):Observable<any>{
-        return this.http.post(url)
-    }*/
+    public post(url:string, product:Product):Observable<any>{
+        return this.http.post(url, product)
+    }
 }   

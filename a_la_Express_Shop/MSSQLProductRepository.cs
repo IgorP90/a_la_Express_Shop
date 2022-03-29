@@ -34,7 +34,7 @@ namespace a_la_Express_Shop
             }
             catch (Exception ex)
             {
-                return new Product { Description = "Error = " + ex };
+                return new Product { Description = "Error in MSSQLProductRepository = " + ex };
             }
         }
         public void Update(Product product)

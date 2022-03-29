@@ -13,12 +13,12 @@ namespace a_la_Express_Shop.Controllers
     {
         private IRepository db;
 
-        public HomeController(MSSQLProductRepository ms)
+        public HomeController(IRepository ms)
         {
-            db = new MSSQLProductRepository(new Context());
+            db = ms;
         }
 
-        [HttpPost]
+        [HttpPost("post/{product}")]
         public void Create([FromBody] Product product)
         {
             db.Create(product);
@@ -26,14 +26,7 @@ namespace a_la_Express_Shop.Controllers
         [HttpGet("get/{id}")]
         public Product Read(decimal id)
         {
-            try
-            {
-                return db.Read(id);
-            }
-            catch (Exception ex)
-            {
-                return new Product { Description = "Error = " + ex };
-            }
+            return db.Read(id);
         }
         [HttpPut]
         public void Update(Product product)

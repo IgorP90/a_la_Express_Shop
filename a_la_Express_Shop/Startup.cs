@@ -26,7 +26,7 @@ namespace a_la_Express_Shop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<Context>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
@@ -39,6 +39,7 @@ namespace a_la_Express_Shop
                 .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
 
             //services.AddScoped<IRepository, MSSQLProductRepository>();
+            services.AddTransient<IRepository, MSSQLProductRepository>();
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();
